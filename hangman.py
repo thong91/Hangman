@@ -1,5 +1,3 @@
-import os
-import sys
 import random
 play = True
 choose_category=0
