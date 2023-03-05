@@ -12,7 +12,6 @@ topic = [["car", "caro", "carole"],#topic 1
          ["apple", "appleni", "applenol"],#topic 3
          ["hot", "cold", "coldest"]]#topic 4
 
-
 #Define for each topic    
 def def_category(choose_category):
     if choose_category == 1:
@@ -114,8 +113,7 @@ def game_start(rand_word):
             print(visuals(count))
     return winner
 
-
-
+#Main program
 while play == True:
     start = int(input("1. Play\n2. Exit")) #only number 
     if start == 1:
@@ -133,6 +131,3 @@ while play == True:
         play = False
         print("How many time did you play: ",play_number)
         print("How many time did you win: ",win_number)
-
-
-        
