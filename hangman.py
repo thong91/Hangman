@@ -4,7 +4,7 @@ choose_category=0
 rand_word=""
 play_number = 0
 win_number = 0
-letter = []  # Slit ramdom word to separately letter
+letter = []  # Split ramdom word to separately letter
 topic = [["Russia","Germany","United Kingdom","France","Italy","Spain","Ukraine","Poland","Netherlands","Finland","Vietnam","Thailan","Lao","Campodia","China"],#topic 1
          ["Audi","BMW","Bentley","Chevrolet","Dodge","Ford","Honda","Hyundai","Infiniti","Jaguar","Jeep","Kia","Land Rover","Lexus","Lincoln"],#topic 2
          ["Dog","Bear","Elephant","Polar bear","Turtle","Tortoise","Crocodile","Rabbit","Porcupine","Har","Hen","Pigeon","Albatross","Crow","Fish"],#topic 3
@@ -117,13 +117,13 @@ def game_start(letter):
                     winner=True
                     #print("DEbug",len(results),ori_len)
                     return winner
-                break
+                break #else then break the loop of for
             else:
                 count += 1
                 print("That's wrong letter. Try again:")
                 print(draw_hangman(count))
                 print("Word: ",results)
-                break    
+                break    #break the loop of while
     return winner
 
 while play == True:
@@ -134,7 +134,7 @@ while play == True:
         choose_category = int(input("\nPlayer 1 enter topic number 1.countries; 2.car brands; 3.animals; 4.fruits: "))
         print("Your category is: ",def_category(choose_category))
         rand_word = random.choice(topic[choose_category - 1]) #Random choose one of the word in this topic , -1 because first position in array is 0
-        print ("Hint!: Your random word is ", rand_word)
+        print ("Hint!: The first letter of your random word is ", rand_word[0])
         print ("--------------------------------------------")
         for i in rand_word.lower():
             letter.append(i)
